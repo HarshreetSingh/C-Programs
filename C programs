@@ -1,0 +1,35 @@
+// WAP to find factorial of a given no.
+#include<stdio.h>
+Void main()
+{
+int a,i;
+int fact=1;
+printf("Enter the no.\n");
+scanf ("%d" , &a);
+for (i=a ; i>0 ; i--)
+{
+fact = fact*i;
+}
+printf (" the factorial of no. %d is = %d ,a, fact);
+return 0;
+}
+
+
+// WAP to find the sum of a geometric series.
+#include<stdio.h>
+#include<math.h>
+int main ()
+ {
+float a,r;
+int n;
+float sum =0;
+printf("Enter the first no. of the G.P. series :");
+scanf ("%f", &a);
+printf (" Enter the total no. in the G.P. series:");
+scanf ("%d" , &n);
+printf(" Enter the common ratio of the G.P. series:");
+scanf"%f" , &r);
+sum =(a*(1-pow(r,n)))/(1-r);
+printf(" Sum of the G.P. : %f" ,sum);
+return 0;
+}
