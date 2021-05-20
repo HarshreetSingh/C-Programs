@@ -10,7 +10,7 @@ for (i=a ; i>0 ; i--)
 {
 fact = fact*i;
 }
-printf (" the factorial of no. %d is = %d ,a, fact);
+printf (" the factorial of no. %d is = %d" ,a, fact);
 return 0;
 }
 
@@ -28,7 +28,7 @@ scanf ("%f", &a);
 printf (" Enter the total no. in the G.P. series:");
 scanf ("%d" , &n);
 printf(" Enter the common ratio of the G.P. series:");
-scanf"%f" , &r);
+scanf("%f" , &r);
 sum =(a*(1-pow(r,n)))/(1-r);
 printf(" Sum of the G.P. : %f" ,sum);
 return 0;
