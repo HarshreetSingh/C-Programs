@@ -1,0 +1,26 @@
+// WAP Fibonacci series using recursion.
+#include <stdio.h>
+#include<stdlib.h>
+int fibonacci(int);
+int main()
+{
+int n;
+printf("\nEnter The Number Of Elements:");
+scanf("%d", &n);
+printf("\n0 1");
+fibonacci(n - 2);
+}
+int fibonacci(int n)
+{
+static int num1 = 0, num2 = 1;
+static int new_num;
+if(n > 0)
+{
+new_num = num1 + num2;
+num1 = num2;
+num2 = new_num;
+printf(" %d",new_num);
+fibonacci(n - 1);
+}
+
+}
