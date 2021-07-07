@@ -1,0 +1,86 @@
+#include <stdio.h>
+#include<stdlib.h>
+
+//output function
+void s_output(char *str)
+{
+  for(int i = 0; str[i] != '\0'; i++)
+  {
+    printf("%c",str[i]);
+  }
+}
+//To find the length of string
+void s_length (char *a)
+{
+  int ctr=0,i;
+  for(i=0; a[i] != '\0'; i++)
+  {
+    ctr++;
+  }
+  printf("The length of the string is: 
+    %d",ctr);
+}
+
+//To concatenate two strings
+void s_concatenate(char *str1, char *str2,
+ char *str3)
+{
+  int i,j;
+  for(i=0; str1[i] !='\0'; i++)
+  {
+    str3[i] = str1[i];
+  }
+  for(j=0; str2[j] !='\0'; j++)
+  {
+    str3[i] = str2[j];
+    i++;
+  }
+  str3[i] ='\0';
+  s_output(str3);
+}
+
+//To find reverse of a string
+void s_reverse(char *str)
+{
+  int ctr=0, begin, end;
+  char s[20];
+  while (str[ctr] != '\0')
+  ctr++;
+  end = ctr - 1;
+  for(begin = 0; begin < ctr; begin++)
+  {
+    s[begin] = str[end];
+    end--;
+  }
+  s[begin] = '\0';
+  printf("\nThe reversed string is: ");
+  s_output(s);
+}
+
+//To copy one atring to another string
+void s_copy(char *s1, char *s2)
+{
+  int i;
+  for(i=0; s1[i] != '\0'; i++)
+  {
+    s2[i] = s1[i];
+  }
+  s2[i]='\0';
+  printf("\nThe string is copied to another
+   string. \nThe string is:");
+  s_output(s2);
+}
+
+int main()
+{
+   int ch;
+  char str1[20], str2[20], str3[50];
+  printf("\n*__*__*__*__*__OPTIONS__*__*__*__*__ \n");
+  printf("\n1 To find the length of a string.");
+  printf("\n2 To concatenate two string.");
+  printf("\n3 To find reverse of a string.");
+  printf("\n4 To copy one string to another string.");
+  printf("\n   Enter your selected option: ");
+  scanf("%d",&ch);
+  switch(ch) ;  
+}
